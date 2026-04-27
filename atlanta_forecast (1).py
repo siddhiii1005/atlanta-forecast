@@ -5,7 +5,7 @@ import matplotlib.ticker as mticker
 
 df = pd.read_csv('Atlanta.csv')
 df.columns = [c.strip() for c in df.columns]
-df = df[df['Year'].notna() & (df['Year'] > 2000)].copy()
+df = df[df['Year'].notna() & (df['Year'] > 2010)].copy()
 df['Year'] = df['Year'].astype(int)
 df['Population'] = df['Estimate Population'].astype(float)
 df['NetMig'] = df['Net Mig'].astype(float)
